@@ -1,0 +1,21 @@
+{
+  "name": "appointment-booking-app",
+  "version": "1.0.0",
+  "description": "Full-stack appointment booking application with frontend and backend API",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "appointment",
+    "booking",
+    "express",
+    "full-stack"
+  ],
+  "author": "GitHub Copilot",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}

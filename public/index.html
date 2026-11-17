@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Appointment Booking</title>
+    <meta
+      name="description"
+      content="Premium healthcare appointment booking experience with modern service cards and responsive scheduling."
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="brand-wrap">
+          <div class="brand-mark">+</div>
+          <div>
+            <p class="eyebrow">Wellness Care</p>
+            <h1>Book Your Appointment</h1>
+          </div>
+        </div>
+
+        <div class="header-badges">
+          <span>Same-day visits</span>
+          <span>4.9 patient rating</span>
+        </div>
+      </header>
+
+      <section class="hero-strip" aria-label="Quick clinic highlights">
+        <div class="hero-card">
+          <strong>1,200+</strong>
+          <span>Patients cared for</span>
+        </div>
+        <div class="hero-card">
+          <strong>24/7</strong>
+          <span>Online scheduling</span>
+        </div>
+        <div class="hero-card">
+          <strong>Top-rated</strong>
+          <span>Medical support</span>
+        </div>
+      </section>
+
+      <main class="layout">
+        <section class="panel service-panel">
+          <div class="section-header">
+            <div>
+              <p class="section-kicker">Our specialties</p>
+              <h2>Available Services</h2>
+            </div>
+          </div>
+          <div id="servicesContainer" class="service-grid"></div>
+        </section>
+
+        <section class="panel form-panel">
+          <div class="section-header">
+            <div>
+              <p class="section-kicker">Schedule</p>
+              <h2>Appointment Form</h2>
+            </div>
+          </div>
+
+          <form id="bookingForm" novalidate>
+            <div class="field-row">
+              <label for="name">Full name</label>
+              <input id="name" name="name" type="text" placeholder="Your full name" required />
+            </div>
+
+            <div class="field-row">
+              <label for="contact">Contact details</label>
+              <input id="contact" name="contact" type="text" placeholder="Phone number or email" required />
+            </div>
+
+            <div class="field-row">
+              <label for="serviceSelect">Service</label>
+              <select id="serviceSelect" name="service" required>
+                <option value="">Choose a service</option>
+              </select>
+            </div>
+
+            <div class="field-row">
+              <label for="slotSelect">Preferred time</label>
+              <select id="slotSelect" name="slot" required>
+                <option value="">Choose a time</option>
+              </select>
+            </div>
+
+            <button type="submit" class="primary-btn">Confirm Appointment</button>
+          </form>
+
+          <div id="message" class="message" aria-live="polite"></div>
+        </section>
+      </main>
+
+      <section class="panel admin-panel">
+        <div class="section-header">
+          <div>
+            <p class="section-kicker">Overview</p>
+            <h2>Booking Overview</h2>
+          </div>
+        </div>
+        <div id="bookingsContainer" class="bookings-list"></div>
+      </section>
+    </div>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
